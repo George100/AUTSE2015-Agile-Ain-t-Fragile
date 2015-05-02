@@ -1,2 +1,8 @@
 # Agile-Ain-t-Fragile
-SE 407707 Project 2
+
+--------------- System settings ---------------
+Operating System: Windows 7 (64-bit)
+
+Base Memory: 512 MB
+
+Storage: 25.00 GB
