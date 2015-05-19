@@ -49,7 +49,6 @@
 				mysqli_close($connection);
 			?>	
 		<center>
-		<br><a href="searchdataform.php">Search again</a>
 		<br><a href="index.php">Return to Home Page</a>
 		</center>
 	</body>
