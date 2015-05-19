@@ -21,7 +21,7 @@
 						} else {
 						
 							echo "<p>Search results for: <i>", $search, "</i></p>";
-						
+							
 							$query = "SELECT * from $sql_tble WHERE title LIKE '$search%'";
 							$result = mysqli_query($connection, $query);
 							
