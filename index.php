@@ -13,7 +13,8 @@
 				<p>
 				Title: <input type="text" name="searchTitle" placeholder="Title name">
 				<p>
-				Author: <input type="text" name="author" placeholder="Author name">
+				Author: <input type="text" name="authorFName" placeholder="First name">
+				<input type="text" name="authorLName" placeholder="Last Name">
 				<p>
 				Date Published: <input type="month" name="searchYear" placeholder="Year Published">
 				<p>

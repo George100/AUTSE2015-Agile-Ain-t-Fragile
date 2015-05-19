@@ -15,6 +15,8 @@
 						echo "<p>Database connection failure</p>";
 					} else {					
 						$search = $_GET["searchTitle"];
+						$authorFName = $_GET["authorFName"];
+						$authorLName = $_GET["authorLName"];
 						$datePublished = $_GET["searchYear"];
 						$searchCategory = $_GET["searchCategory"];
 						// tells user to input something to search for, otherwise search for user input.
@@ -25,6 +27,12 @@
 							$query = "SELECT * FROM $sql_tble
 										WHERE title LIKE '%$search%'";
 						
+							if ($authorFName != null) {
+								$query .= "AND fname LIKE '%$authorFName%'";
+							}
+							if ($authorLName != null) {
+								$query .= "AND lname LIKE '%$authorLName%'";
+							}
 							if ($datePublished != 0 || $datePublished != null) {
 								$query .= "AND datepublish LIKE '$datePublished'";
 							}
