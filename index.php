@@ -4,15 +4,21 @@
 	</head>
 	
 	<body>
-		<center><h1>Welcome to SERLER</h1>
-
-
+		<center>
+			<h1>Welcome to SERLER</h1>
 			<h4>Feel free to view data in the repository.</h4>
-			<br>
-			<a href='inputdataform.php'>Input new data</a>
-			<br><br>
-			<a href='searchdataform.php'>Search data</a>
-
-			</center>
+			
+			<form action="searchdataprocess.php" method="get">
+				<label>Enter data title: 
+				<br>
+				<input type="text" name="search"></label>
+				<p>
+				<input type="submit" value="Search!">
+			</form>
+			
+			<br><a href="inputdataform.php">Click here to submit data! (Admins only)<a/>
+			<br><a href="index.php">Click here to return to the Home Page</a>
+			
+		</center>
 	</body>
 </html>
