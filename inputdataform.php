@@ -6,7 +6,6 @@
 	<body>
 		<center><h1>Data Entry Form</h1>
 			<form action="inputdataprocess.php" method="post">
-
 				Title: 
 				<input type="text" name="title" placeholder="Mary had a little lamb"></label>
 				<p>
@@ -23,8 +22,6 @@
 				<input type="submit" value="Post">
 				<input type="reset" value="Reset">
 			</form>
-			<a href="searchdataform.php">Click here to search SERLER</a>
-			<br>
 			<a href="index.php">Click here to return to Home Page</a>
 		</center>
 	</body>
