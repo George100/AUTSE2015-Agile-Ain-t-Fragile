@@ -9,9 +9,15 @@
 			<h4>Feel free to view data in the repository.</h4>
 			
 			<form action="searchdataprocess.php" method="get">
-				<label>Enter data title: 
-				<br>
-				<input type="text" name="search"></label>
+				Fill in the fields:
+				<p>
+				Title: <input type="text" name="title" placeholder="Title name">
+				<p>
+				Author: <input type="text" name="author" placeholder="Author name">
+				<p>
+				Date Published: <input type="month" name="year" placeholder="Year Published">
+				<p>
+				Category: <input type="category" name="category" placeholder="Software Engineering">
 				<p>
 				<input type="submit" value="Search!">
 			</form>
