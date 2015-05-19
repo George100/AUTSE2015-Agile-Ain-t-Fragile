@@ -17,7 +17,6 @@
 			</form>
 			
 			<br><a href="inputdataform.php">Click here to submit data! (Admins only)<a/>
-			<br><a href="index.php">Click here to return to the Home Page</a>
 			
 		</center>
 	</body>
