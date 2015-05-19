@@ -14,15 +14,26 @@
 					if (!$connection) {
 						echo "<p>Database connection failure</p>";
 					} else {					
-						$search = $_GET["search"];
+						$search = $_GET["searchTitle"];
+						$datePublished = $_GET["searchYear"];
+						$searchCategory = $_GET["searchCategory"];
 						// tells user to input something to search for, otherwise search for user input.
-						if (empty ($_GET["search"])) {
+						if (empty ($_GET["searchTitle"])) {
 							echo "<p>Please enter something to search for!</p>";
 						} else {
 						
+							$query = "SELECT * FROM $sql_tble
+										WHERE title LIKE '%$search%'";
+						
+							if ($datePublished != 0 || $datePublished != null) {
+								$query .= "AND datepublish LIKE '$datePublished'";
+							}
+							if ($searchCategory != null) {
+								$query .= "AND category LIKE '%$searchCategory%'";
+							}
+							
 							echo "<p>Search results for: <i>", $search, "</i></p>";
 							
-							$query = "SELECT * from $sql_tble WHERE title LIKE '$search%'";
 							$result = mysqli_query($connection, $query);
 							
 							if (!$result) {
