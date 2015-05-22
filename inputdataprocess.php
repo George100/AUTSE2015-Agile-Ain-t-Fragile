@@ -13,7 +13,6 @@
 				if (!$connection) {
 					echo "<p>Database connection failure</p>";
 				} else {
-					
 					if (isset ($_POST["title"])) {
 						$title = $_POST["title"];
 						if (empty ($title)) {
@@ -40,16 +39,29 @@
 					if (isset ($_POST["category"])) {
 						$category = $_POST["category"];
 					}
+					// Merge the author name
+					if ($fname != null && $lname != null) {
+						$authorOne = "$lname" . ", " . "$fname";
+					}
+					if (isset ($_POST["afname"][0]) && isset ($_POST["alname"][0])) {
+						$authorTwo = $_POST["alname"][0] . ", " . $_POST["afname"][0];
+					}
+					if (isset ($_POST["afname"][1]) && isset ($_POST["alname"][1])) {
+						$authorThree = $_POST["alname"][1] . ", " . $_POST["afname"][1];
+					}
+					if (isset ($_POST["afname"][2]) && isset ($_POST["alname"][2])) {
+						$authorFour = $_POST["alname"][2] . ", " . $_POST["afname"][2];
+					}
 					
 					// Current day for the date added.
 					$date = date('d/m/y');
 					
 					// checks if the necessary fields are complete, otherwise inform user to fill them in.
-					if ($title != null && $fname != null && $lname != null && $datePub != null) {
+					if ($title != null && $datePub != null) {
 						$query = "insert into $sql_tble"
-							."(title, fname, lname, dateadded, datepublish, category)"
+							."(title, authorone, authortwo, authorthree, authorfour, dateadded, datepublish, category)"
 								. "values"
-									."('$title', '$fname', '$lname', '$date', '$datePub', '$category')";
+									."('$title', '$authorOne', '$authorTwo', '$authorThree', '$authorFour', '$date', '$datePub', '$category')";
 						
 						// executes the query
 						$result = @mysqli_query($connection, $query);
