@@ -15,6 +15,8 @@
 				
 				$maxResults = 0;
 				
+				
+				
 				if (!$connection) {
 					echo "<p>Something is wrong with ", $query, "</p>";
 				} else {
@@ -31,16 +33,22 @@
 							echo "<table border=\"1\">";
 								
 							while ($row = mysqli_fetch_assoc($result)) {
+								
+								$authorOne = $row["authoronefname"] . " " . $row["authoronelname"];
+								$authorTwo = $row["authortwofname"] . " " . $row["authortwolname"];
+								$authorThree = $row["authorthreefname"] . " " . $row["authorthreelname"];
+								$authorFour = $row["authorfourfname"] . " " .  $row["authorfourlname"];
+								
 								echo "<tr>";
-								echo "<td>Title: ", $row["title"], "</td>";
-								echo "<td>First Name: ", $row["fname"], "</td>";
-								echo "<td>Last Name: ", $row["lname"], "</td>";
-								echo "<td>Date Added: ", $row["dateadded"], "</td>";
-								echo "<td>Date Published: ", $row["datepublish"], "</td>";
-								echo "<td>Category: ", $row["category"], "</td>";
+								echo "<td><b>Title: </b>", $row["title"], "</td>";
+								echo "<td><b>Author: </b>", $authorOne, ", <br>", $authorTwo, "</td>";
+								echo "<td><b>Author: </b>", $authorThree, ", <br>", $authorFour, "</td>";
+								echo "<td><b>Date Added: </b>", $row["dateadded"], "</td>";
+								echo "<td><b>Date Published: </b>", $row["datepublish"], "</td>";
+								echo "<td><b>Category: </b>", $row["category"], "</td>";
 								echo "</tr>";
 								
-								// Limits the max results to 25
+								// Limits the max. results to 25
 								$maxResults++;
 								if ($maxResults == 25) {
 									break;
