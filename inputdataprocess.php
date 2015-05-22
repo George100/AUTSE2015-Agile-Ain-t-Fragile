@@ -64,8 +64,8 @@
 					} else {
 						$authorThreeFname = null;
 					}
-					if (isset ($_POST["afname"][1])) {
-						$authorThreeLname = $_POST["afname"][1];
+					if (isset ($_POST["alname"][1])) {
+						$authorThreeLname = $_POST["alname"][1];
 						if (!preg_match($namePattern, $authorThreeLname)) {
 							$authorThreeLname = null;
 						}
@@ -80,8 +80,8 @@
 					} else {
 						$authorFourFname = null;
 					}
-					if (isset ($_POST["afname"][2])) {
-						$authorFourLname = $_POST["afname"][2];
+					if (isset ($_POST["alname"][2])) {
+						$authorFourLname = $_POST["alname"][2];
 						if (!preg_match($namePattern, $authorFourLname)) {
 							$authorFourLname = null;
 						}
