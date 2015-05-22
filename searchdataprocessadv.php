@@ -13,47 +13,39 @@
 				
 					if (!$connection) {
 						echo "<p>Database connection failure</p>";
-					} else {					
-					
-						if (isset ($_GET["searchTitle"])) {
-							$search = $_GET["searchTitle"];
-						}						
-						if (isset ($_GET["authorFName"])) {
-							$authorFName = $_GET["authorFName"];
-						}						
-						if (isset ($_GET["authorLName"])) {
-							$authorLName = $_GET["authorLName"];
-						}						
-						if (isset ($_GET["searchYear"])) {
-							$datePublished = $_GET["searchYear"];
-						}						
-						if (isset ($_GET["searchCategory"])) {
-							$searchCategory = $_GET["searchCategory"];
-						}		
-												
-						// tells user to input something to search for, otherwise search for user input.
+					} else {
 						if (empty ($_GET["searchTitle"])) {
-							echo "<p>Please enter something to search for!</p>";
+							echo "<p>Please enter a title, otherwise we don't know what to search for!</p>";
 						} else {
-						
+							
+							$searchTitle = $_GET["searchTitle"];
+							$searchYear = $_GET["searchYear"];
+							$searchCategory = $_GET["searchCategory"];
+							$authorOneFName = $_GET["authorOneFName"];
+							$authorOneLName = $_GET["authorOneLName"];
+							
 							$query = "SELECT * FROM $sql_tble
-										WHERE title LIKE '%$search%'";
-						
-							if ($authorFName != null && !empty ($authorFName)) {
-								$query .= "AND fname LIKE '%$authorFName%'";
+								WHERE title LIKE '%$searchTitle%'";	
+
+							if (!empty ($_GET["searchYear"])) {
+								$query .= "AND datepublish LIKE '$searchYear'";
 							}
-							if ($authorLName != null) {
-								$query .= "AND lname LIKE '%$authorLName%'";
+							if (!empty ($_GET["searchCategory"])) {
+								$query .= "AND category LIKE '$searchCategory'";
 							}
-							if ($datePublished != 0 || $datePublished != null) {
-								$query .= "AND datepublish LIKE '$datePublished'";
+							if (!empty ($_GET["authorOneFName"])) {
+								$query .= "AND authoronefname LIKE '$authorOneFName'";
+								$query .= "OR authortwofname LIKE '$authorOneFName'";
+								$query .= "OR authorthreefname LIKE '$authorOneFName'";
+								$query .= "OR authorfourfname LIKE '$authorOneFName'";
 							}
-							if ($searchCategory != null) {
-								$query .= "AND category LIKE '%$searchCategory%'";
+							if (!empty ($_GET["authorOneLName"])) {
+								$query .= "AND authoronelname LIKE '$authorOneLName'";
+								$query .= "OR authortwolname LIKE '$authorOneLName'";
+								$query .= "OR authorthreelname LIKE '$authorOneLName'";
+								$query .= "OR authorfourlname LIKE '$authorOneLName'";
 							}
-							
-							echo "<p>Search results for: <i>", $search, "</i></p>";
-							
+								
 							$result = mysqli_query($connection, $query);
 							
 							if (!$result) {
@@ -66,13 +58,18 @@
 									echo "<table border=\"1\">";
 										
 									while ($row = mysqli_fetch_assoc($result)) {
+										$authorOne = $row["authoronefname"] . " " . $row["authoronelname"];
+										$authorTwo = $row["authortwofname"] . " " . $row["authortwolname"];
+										$authorThree = $row["authorthreefname"] . " " . $row["authorthreelname"];
+										$authorFour = $row["authorfourfname"] . " " .  $row["authorfourlname"];
+										
 										echo "<tr>";
-										echo "<td>Title: ", $row["title"], "</td>";
-										echo "<td>First Name: ", $row["fname"], "</td>";
-										echo "<td>Last Name: ", $row["lname"], "</td>";
-										echo "<td>Date Added: ", $row["dateadded"], "</td>";
-										echo "<td>Date Published: ", $row["datepublish"], "</td>";
-										echo "<td>Category: ", $row["category"], "</td>";
+										echo "<td><b>Title: </b>", $row["title"], "</td>";
+										echo "<td><b>Author(s): </b>", $authorOne, "<br>", $authorTwo, 
+										"<br>", $authorThree, "<br>", $authorFour, "</td>";
+										echo "<td><b>Date Added: </b>", $row["dateadded"], "</td>";
+										echo "<td><b>Date Published: </b>", $row["datepublish"], "</td>";
+										echo "<td><b>Category: </b>", $row["category"], "</td>";
 										echo "</tr>";
 									}
 								}
@@ -82,7 +79,12 @@
 					}	
 					mysqli_close($connection);
 				?>	
-			<br><a href="index.php">Return to Home Page</a>
+			<br>
+			<a href="searchdataformadv.php">Advance Search Again</a>
+			<br>
+			 - 
+			<br>
+			<a href="index.php">Return to Home Page</a>
 		</center>
 	</body>
 </html>
