@@ -13,8 +13,10 @@
 				
 				$connection = @mysqli_connect($sql_host, $sql_user, $sql_pass, $sql_db);
 				
+				$maxResults = 0;
+				
 				if (!$connection) {
-					
+					echo "<p>Something is wrong with ", $query, "</p>";
 				} else {
 					$query = "SELECT * FROM $sql_tble";
 					
@@ -37,15 +39,30 @@
 								echo "<td>Date Published: ", $row["datepublish"], "</td>";
 								echo "<td>Category: ", $row["category"], "</td>";
 								echo "</tr>";
+								
+								// Limits the max results to 25
+								$maxResults++;
+								if ($maxResults == 25) {
+									break;
+								}
 							}
 						}
 					}
 					echo "</table>";
 				}			
 			?>
-			
-			<br><a href="inputdataform.php">Click here to submit data! (registered users only)</a>
-			<br><a href="index.php">Click here to return to Home Page</a>
+			<p>
+			<a href="index.php">Basic Search</a>
+			 - 
+			<a href="searchdataformadv.php">Advanced Search</a>
+			<br>
+			 - 
+			<br>
+			<a href="inputdataform.php">Click here to submit data! (registered users only)</a>
+			<br>
+			 - 
+			<br>
+			<a href="index.php">Click here to return to Home Page</a>
 		</center>
 	</body>
 </html>
