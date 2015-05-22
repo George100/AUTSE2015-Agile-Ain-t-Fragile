@@ -8,7 +8,7 @@
 			<h1>Welcome to SERLER</h1>
 			<h4>Feel free to view data in the repository.</h4>
 			
-			<form action="searchdataprocess.php" method="get">
+			<form action="searchdataprocessadv.php" method="get">
 				Fill in the fields to search:
 				<p>
 				Title: <input type="text" name="searchTitle" placeholder="Title name">
@@ -23,7 +23,12 @@
 				<input type="submit" value="Search!">
 			</form>
 			<a href="index.php">Basic Search</a>
-			<br><a href="inputdataform.php">Click here to submit data! (registered users only)</a>
+			<br>
+			 - 
+			<br>
+			<a href="inputdataform.php">Click here to submit data! (registered users only)</a>
+			<br>
+			 - 
 			<br><a href="library.php">Click here to view library</a>
 			
 		</center>
