@@ -14,8 +14,14 @@
 				<input type="submit" value="Search!">
 			</form>
 			<a href="searchdataformadv.php">Advanced Search</a>
-			<br><a href="inputdataform.php">Click here to submit data! (registered users only)</a>
-			<br><a href="library.php">Click here to view library!</a>
+			<br>
+			 - 			
+			<br>
+			<a href="inputdataform.php">Click here to submit data! (registered users only)</a>
+			<br>
+			 - 			
+			<br>
+			<a href="library.php">Click here to view library!</a>
 		</center>
 	</body>
 </html>

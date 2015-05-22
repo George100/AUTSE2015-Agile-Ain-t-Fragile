@@ -22,8 +22,17 @@
 				<input type="submit" value="Post">
 				<input type="reset" value="Reset">
 			</form>
+			<a href="index.php">Basic Search</a>
+			 - 
+			<a href="searchdataformadv.php">Advanced Search</a>
+			<br>
+			 - 
+			<br>
 			<a href="library.php">Click here to view Library</a>
-			<br><a href="index.php">Click here to return to Home Page</a>
+			<br>
+			 - 
+			<br>
+			<a href="index.php">Click here to return to Home Page</a>
 		</center>
 	</body>
 </html>
