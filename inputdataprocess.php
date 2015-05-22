@@ -13,6 +13,9 @@
 				if (!$connection) {
 					echo "<p>Database connection failure</p>";
 				} else {
+					
+					$namePattern = "/^[a-zA-Z]+$/";
+					
 					if (isset ($_POST["title"])) {
 						$title = $_POST["title"];
 						if (empty ($title)) {
@@ -21,15 +24,13 @@
 					}
 					if (isset ($_POST["fname"])) {
 						$fname = $_POST["fname"];
-						$fnamePattern = "/^[a-zA-Z]+$/";
-						if (!preg_match($fnamePattern, $fname)) {
+						if (!preg_match($namePattern, $fname)) {
 							$fname = null;
 						}
 					}
 					if (isset ($_POST["lname"])) {
 						$lname = $_POST["lname"];
-						$lnamePattern = "/^[a-zA-Z]+$/";
-						if (!preg_match ($lnamePattern, $lname)) {
+						if (!preg_match ($namePattern, $lname)) {
 							$lname = null;
 						}
 					}
@@ -39,29 +40,67 @@
 					if (isset ($_POST["category"])) {
 						$category = $_POST["category"];
 					}
-					// Merge the author name
-					if ($fname != null && $lname != null) {
-						$authorOne = "$lname" . ", " . "$fname";
+					if (isset ($_POST["afname"][0])) {
+						$authorTwoFname = $_POST["afname"][0];
+						if (!preg_match($namePattern, $authorTwoFname)) {
+							$authorTwoFname = null;
+						}
+					} else {
+						$authorTwoFname = null;
 					}
-					if (isset ($_POST["afname"][0]) && isset ($_POST["alname"][0])) {
-						$authorTwo = $_POST["alname"][0] . ", " . $_POST["afname"][0];
+					if (isset ($_POST["alname"][0])) {
+						$authorTwoLname = $_POST["alname"][0];
+						if (!preg_match($namePattern, $authorTwoLname)) {
+							$authorTwoLname = null;
+						}
+					} else {
+						$authorTwoLname = null;
 					}
-					if (isset ($_POST["afname"][1]) && isset ($_POST["alname"][1])) {
-						$authorThree = $_POST["alname"][1] . ", " . $_POST["afname"][1];
+					if (isset ($_POST["afname"][1])) {
+						$authorThreeFname = $_POST["afname"][1];
+						if (!preg_match($namePattern, $authorThreeFname)) {
+							$authorThreeFname = null;
+						}
+					} else {
+						$authorThreeFname = null;
 					}
-					if (isset ($_POST["afname"][2]) && isset ($_POST["alname"][2])) {
-						$authorFour = $_POST["alname"][2] . ", " . $_POST["afname"][2];
+					if (isset ($_POST["afname"][1])) {
+						$authorThreeLname = $_POST["afname"][1];
+						if (!preg_match($namePattern, $authorThreeLname)) {
+							$authorThreeLname = null;
+						}
+					} else {
+						$authorThreeLname = null;
 					}
-					
+					if (isset ($_POST["afname"][2])) {
+						$authorFourFname = $_POST["afname"][2];
+						if (!preg_match($namePattern, $authorFourFname)) {
+							$authorFourFname = null;
+						}
+					} else {
+						$authorFourFname = null;
+					}
+					if (isset ($_POST["afname"][2])) {
+						$authorFourLname = $_POST["afname"][2];
+						if (!preg_match($namePattern, $authorFourLname)) {
+							$authorFourLname = null;
+						}
+					} else {
+						$authorFourLname = null;
+					}
 					// Current day for the date added.
 					$date = date('d/m/y');
 					
 					// checks if the necessary fields are complete, otherwise inform user to fill them in.
 					if ($title != null && $datePub != null) {
 						$query = "insert into $sql_tble"
-							."(title, authorone, authortwo, authorthree, authorfour, dateadded, datepublish, category)"
+							."(title, authoronefname, authoronelname, authortwofname, authortwolname, 
+								authorthreefname, authorthreelname, authorfourfname, authorfourlname, 
+									dateadded, datepublish, category)"
 								. "values"
-									."('$title', '$authorOne', '$authorTwo', '$authorThree', '$authorFour', '$date', '$datePub', '$category')";
+									."('$title', '$fname', '$lname', '$authorTwoFname', '$authorTwoLname', 
+										'$authorThreeFname', '$authorThreeLname', '$authorFourFname', '$authorFourLname', 
+											'$date', '$datePub', '$category')";
 						
 						// executes the query
 						$result = @mysqli_query($connection, $query);
