@@ -14,13 +14,8 @@
 				Title: <input type="text" name="searchTitle" placeholder="Title name">
 				<p>
 
-				Author 1: <input type="text" name="authorOneFName" placeholder="First name">
+				Author: <input type="text" name="authorOneFName" placeholder="First name">
 				<input type="text" name="authorOneLName" placeholder="Last Name">
-				<br>
-					*Additional author is optional*
-				<br>
-				Author 2: <input type="text" name="authorTwoFName" placeholder="First name">
-				<input type="text" name="authorTwoLName" placeholder="Last Name">
 				<p>
 				Date Published: <input type="month" name="searchYear" placeholder="Year Published">
 				<p>
