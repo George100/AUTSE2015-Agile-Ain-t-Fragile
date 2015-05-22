@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>Status Posting System</title>
+		<title>SERLER Data Entry</title>
 	</head>
 	
 	<body>
@@ -22,7 +22,8 @@
 				<input type="submit" value="Post">
 				<input type="reset" value="Reset">
 			</form>
-			<a href="index.php">Click here to return to Home Page</a>
+			<a href="library.php">Click here to view Library</a>
+			<br><a href="index.php">Click here to return to Home Page</a>
 		</center>
 	</body>
 </html>
