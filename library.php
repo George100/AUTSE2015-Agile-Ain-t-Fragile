@@ -15,8 +15,6 @@
 				
 				$maxResults = 0;
 				
-				
-				
 				if (!$connection) {
 					echo "<p>Something is wrong with ", $query, "</p>";
 				} else {
