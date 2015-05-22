@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>SERLER</title>
+		<title>SERLER Home</title>
 	</head>
 	
 	<body>
@@ -9,22 +9,13 @@
 			<h4>Feel free to view data in the repository.</h4>
 			
 			<form action="searchdataprocess.php" method="get">
-				Fill in the fields to search:
 				<p>
 				Title: <input type="text" name="searchTitle" placeholder="Title name">
-				<p>
-				Author: <input type="text" name="authorFName" placeholder="First name">
-				<input type="text" name="authorLName" placeholder="Last Name">
-				<p>
-				Date Published: <input type="month" name="searchYear" placeholder="Year Published">
-				<p>
-				Category: <input type="category" name="searchCategory" placeholder="Software Engineering">
-				<p>
 				<input type="submit" value="Search!">
 			</form>
-			
-			<br><a href="inputdataform.php">Click here to submit data! (Admins only)<a/>
-			
+			<a href="searchdataformadv.php">Advanced Search</a>
+			<br><a href="inputdataform.php">Click here to submit data! (registered users only)</a>
+			<br><a href="library.php">Click here to view library!</a>
 		</center>
 	</body>
 </html>
