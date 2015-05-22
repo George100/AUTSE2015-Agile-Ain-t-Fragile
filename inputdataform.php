@@ -3,12 +3,12 @@
 		<title>SERLER Data Entry</title>
 		
 		<script language="javascript">
-			var i = 1;
+			var i = 0;
 			function changeIt()
 			{
-				if (i != 4) {
+				if (i != 3) {
 					my_div.innerHTML = my_div.innerHTML +
-					"First Name: <input type='text' name='mytext'+ i> Last Name: <input type='text' name='mytext'+ i><p>"
+					"First Name: <input type='text' name='afname[]'> Last Name: <input type='text' name='alname[]'><p>" 
 					i++;
 				}
 			}
@@ -18,13 +18,11 @@
 	<body>
 		<center><h1>Data Entry Form</h1>
 			<form action="inputdataprocess.php" method="post">
-				Title: 
-				<input type="text" name="title" placeholder="Mary had a little lamb"></label>
+				Title: <input type="text" name="title" placeholder="Mary had a little lamb"></label>
 				<p>
-				Author: 
-				<br>First Name: <input type="text" name="fname" placeholder="John">
+				Author(s): <input type="button" value="Add Author" onClick="changeIt()">
+				<p>First Name: <input type="text" name="fname" placeholder="John">
 				Last Name: <input type="text" name="lname" placeholder="Smith">
-				<input type="button" value="Add Author" onClick="changeIt()">
 				<div id="my_div"></div>
 				<p>
 				Date Published:
