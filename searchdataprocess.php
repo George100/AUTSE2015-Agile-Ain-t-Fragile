@@ -1,12 +1,16 @@
 <html>
 	<head>
 		<title>SERLER</title>
-	</head>
+	<link href="style.css" rel="stylesheet" type="text/css">
+    </head>
+	<img src="Images/logo.png" width="322" height="152" alt=""/>
+    <img src="Images/aaflogo.png" width="322" height="152" alt="" align="right"/> 
+    <p>&nbsp;</p>
 	
 	<body>
 		<center>
-			<h1>Welcome to SERLER</h1>
-			<h4>Feel free to view data in the repository.</h4>
+			<h1 class="jumbotron">Welcome to SERLER</h1>
+			<h4 class="jumbotron">Feel free to view data in the repository.</h4>
 			
 			<?php
 				require_once('sqlinfo.inc.php');
@@ -49,9 +53,12 @@
 					}
 				}			
 			?>
-			<a href="searchdataformadv.php">Click here to use the advanced search!</a>
-			<br><a href="inputdataform.php">Click here to submit data! (registered users only)</a>
-			<br><a href="index.php">Click here to return to Home Page</a>
-		</center>
+			<a href="searchdataformadv.php" class="btn">Click here to use the advanced search!</a>
+            <p>&nbsp;</p>
+			<br><a href="inputdataform.php" class="btn">Click here to submit data! (registered users only)</a>
+            <p>&nbsp;</p>
+			<br><a href="index.php" class="btn">Click here to return to Home Page</a>
+            <p>&nbsp;</p>
+    </center>
 	</body>
 </html>
