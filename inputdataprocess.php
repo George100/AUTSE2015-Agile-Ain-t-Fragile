@@ -1,10 +1,15 @@
 <html>
 	<head>
 		<title>Post Status Processed</title>
-	</head>
+	<link href="style.css" rel="stylesheet" type="text/css">
+    </head>
+	<img src="Images/logo.png" width="322" height="152" alt=""/>
+    <img src="Images/aaflogo.png" width="322" height="152" alt="" align="right"/> 
+    <p>&nbsp;</p>
 	
 	<body>
-		<center><h1>Post Status Process</h1>
+		<center><h1 class="jumbotron">Post Status Process</h1>
+			<span class="btn">
 			<?php
 				require_once('sqlinfo.inc.php');
 				
@@ -128,9 +133,9 @@
 				}
 				mysqli_close($connection);
 			?>
-		<a href="inputdataform.php">Click here to submit another form</a>
-		<br>
-		<a href="index.php">Click here to return to the Home Page</a>
+		    <a href="inputdataform.php">Click here to submit another form</a></span> <br>
+            <p>&nbsp;</p>
+		<a href="index.php" class="btn">Click here to return to the Home Page</a>
 		</center>
 	</body>
 </html>
