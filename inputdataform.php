@@ -1,6 +1,11 @@
 <html>
 	<head>
 		<title>SERLER Data Entry</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    </head>
+	<img src="Images/logo.png" width="322" height="152" alt=""/>
+    <p>&nbsp;</p>
+    <center>
 		
 		<script language="javascript">
 			var i = 0;
@@ -16,8 +21,13 @@
 	</head>
 	
 	<body>
-		<center><h1>Data Entry Form</h1>
-			<form action="inputdataprocess.php" method="post">
+	<center>
+	  <div class="jumbotron">
+      <div class="container">
+		  <h1>Data Entry Form</h1>
+        </div>
+      </div>
+	  <form action="inputdataprocess.php" method="post">
 				Title: <input type="text" name="title" placeholder="Mary had a little lamb"></label>
 				<p>
 				Author(s): <input type="button" value="Add Author" onClick="changeIt()">
@@ -33,18 +43,18 @@
 				<p>
 				<input type="submit" value="Post">
 				<input type="reset" value="Reset">
-			</form>
-			<a href="index.php">Basic Search</a>
+	  </form>
+			<a href="index.php" class="btn">Basic Search</a>
 			 - 
-			<a href="searchdataformadv.php">Advanced Search</a>
-			<br>
-			 - 
-			<br>
-			<a href="library.php">Click here to view Library</a>
+			<a href="searchdataformadv.php" class="btn">Advanced Search</a>
 			<br>
 			 - 
 			<br>
-			<a href="index.php">Click here to return to Home Page</a>
-		</center>
+			<a href="library.php" class="btn">Click here to view Library</a>
+			<br>
+			 - 
+		  <br>
+		<a href="index.php" class="btn">Click here to return to Home Page</a>
+	  </center>
 	</body>
 </html>
