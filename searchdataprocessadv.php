@@ -1,11 +1,17 @@
 <html>
 	<head>
 		<title>Search Status Processed</title>
-	</head>
+	<html>
+	<head>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    </head>
+	<img src="Images/logo.png" width="322" height="152" alt=""/>
+    <img src="Images/aaflogo.png" width="322" height="152" alt="" align="right"/> 
+	<p>&nbsp;</p>
 	
 	<body>
 		<center>
-			<h1>Search Results</h1>
+			<h1 class="jumbotron">Search Results</h1>
 				<?php
 					require_once('sqlinfo.inc.php');
 					
@@ -26,7 +32,6 @@
 							
 							$query = "SELECT * FROM $sql_tble
 								WHERE title LIKE '%$searchTitle%'";	
-
 							if (!empty ($_GET["searchYear"])) {
 								$query .= "AND datepublish LIKE '$searchYear'";
 							}
@@ -80,11 +85,11 @@
 					mysqli_close($connection);
 				?>	
 			<br>
-			<a href="searchdataformadv.php">Advance Search Again</a>
+			<a href="searchdataformadv.php" class="btn">Advance Search Again</a>
 			<br>
 			 - 
 			<br>
-			<a href="index.php">Return to Home Page</a>
+			<a href="index.php" class="btn">Return to Home Page</a>
 		</center>
 	</body>
 </html>
