@@ -4,7 +4,7 @@
     <link href="style.css" rel="stylesheet" type="text/css">
     </head>
 	<img src="Images/logo.png" width="322" height="152" alt=""/>
-        <img src="Images/aaflogo.png" width="322" height="152" alt="" align="right"/> 
+    <img src="Images/aaflogo.png" width="322" height="152" alt="" align="right"/> 
     <p>&nbsp;</p>
     <center>
 		
@@ -45,17 +45,17 @@
 				<input type="submit" value="Post">
 				<input type="reset" value="Reset">
 	  </form>
-			<a href="index.php" class="btn">Basic Search</a>
+			<p><a href="index.php" class="btn">Basic Search</a>
 			 - 
-			<a href="searchdataformadv.php" class="btn">Advanced Search</a>
-			<br>
+			   <a href="searchdataformadv.php" class="btn">Advanced Search</a>		  </p>
+			<p><br>
 			 - 
 			<br>
-			<a href="library.php" class="btn">Click here to view Library</a>
-			<br>
+			<a href="library.php" class="btn">Click here to view Library</a>		  </p>
+			<p><br>
 			 - 
 		  <br>
-		<a href="index.php" class="btn">Click here to return to Home Page</a>
+		  <a href="index.php" class="btn">Click here to return to Home Page</a></p>
 	  </center>
 	</body>
 </html>
