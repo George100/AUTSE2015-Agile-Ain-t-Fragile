@@ -9,10 +9,21 @@
 	
 	<body>
 		<center>
-			<h1 class="jumbotron">Welcome to SERLER</h1>
-			<h4 class="jumbotron">Feel free to view data in the repository.</h4>
+        <div class="jumbotron">
+      <div class="container">
+			 <h1>Welcome to SERLER</h1>
+      </div>
+      </div>
+          <p>&nbsp;</p>
+
+<div class="jumbotron">
+    <div class="container">
+	  <h4>Feel free to view data in the repository.</h4>
+    </div>
+</div>
 			
-			<?php
+			<p>
+			  <?php
 				require_once('sqlinfo.inc.php');
 				
 				$connection = @mysqli_connect($sql_host, $sql_user, $sql_pass, $sql_db);
@@ -53,8 +64,10 @@
 					}
 				}			
 			?>
-			<a href="searchdataformadv.php" class="btn">Click here to use the advanced search!</a>
-            <p>&nbsp;</p>
+		  </p>
+			<p><a href="searchdataformadv.php" class="btn">Click here to use the advanced search!</a>
+		  </p>
+			<p>&nbsp;</p>
 			<br><a href="inputdataform.php" class="btn">Click here to submit data! (registered users only)</a>
             <p>&nbsp;</p>
 			<br><a href="index.php" class="btn">Click here to return to Home Page</a>
