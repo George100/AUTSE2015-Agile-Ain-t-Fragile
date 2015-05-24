@@ -38,14 +38,15 @@
 				<p>
 				<input type="submit" value="Search!">
 			</form>
-			<a href="index.php" class="btn">Basic Search</a>
-			<br>
+			<p><a href="index.php" class="btn">Basic Search</a>			</p>
+			<p><br>
 			 - 
 			<br>
-			<a href="inputdataform.php" class="btn">Click here to submit data! (registered users only)</a>
-			<br>
+			<a href="inputdataform.php" class="btn">Click here to submit data! (registered users only)</a>			</p>
+			<p><br>
 			 - 
-			<br><a href="library.php" class="btn">Click here to view library</a>
+			<br>
+			<a href="library.php" class="btn">Click here to view library</a></p>
 			
     </center>
 	</body>
