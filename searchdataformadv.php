@@ -26,11 +26,11 @@
 		  <form action="searchdataprocessadv.php" method="get">
 				Fill in the fields to search:
 				<p>
-				Title: <input type="text" name="searchTitle" placeholder="Title name">
+				Title: <input type="text" name="searchTitle" placeholder="Title name" size="30">
 				<p>
 
-				Author: <input type="text" name="authorOneFName" placeholder="First name">
-				<input type="text" name="authorOneLName" placeholder="Last Name">
+				Author: <input type="text" name="authorOneFName" placeholder="First name" size="10">
+				<input type="text" name="authorOneLName" placeholder="Last Name" size="10">
 				<p>
 				Date Published: <input type="month" name="searchYear" placeholder="Year Published">
 				<p>
