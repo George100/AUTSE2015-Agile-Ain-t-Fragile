@@ -13,10 +13,9 @@
 		</ul>
 	</div>
 	<body>
-	<p>&nbsp;</p>
-	<p>&nbsp;</p>
 	<p class="center">
-	<h1 class="center">&nbsp;</h1>
+	<h1>&nbsp;</h1>
+	<h1>&nbsp;</h1>
 	<h1 class="center">Bibliographic Search</h1>
 	</p>
 	<h4 >&nbsp;</h4>
