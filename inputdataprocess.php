@@ -104,12 +104,14 @@
 							$methodology = "Test Driven Development";
 						}
 					}
+					$practices = null;
 					if (isset ($_POST["practice"])) {
 						$practicesInvestigated = $_POST["practice"];
-						
+						for ($i=0; $i<count($practicesInvestigated);$i++) {
+							$practices .= $practicesInvestigated[$i];
+							$practices .= ", ";
+						}
 					}
-					
-
 					// Current day for the date added.
 					$date = date('d/m/y');
 					
@@ -118,11 +120,11 @@
 						$query = "insert into $sql_tble"
 							."(title, authoronefname, authoronelname, authortwofname, authortwolname, 
 								authorthreefname, authorthreelname, dateadded, datepublish, 
-									sdmethodology)"
+									sdmethodology, practicesinvestigated)"
 								. "values"
 									."('$title', '$fname', '$lname', '$authorTwoFname', '$authorTwoLname', 
 										'$authorThreeFname', '$authorThreeLname', '$date', '$datePub', 
-											'$methodology')";
+											'$methodology', '$practices')";
 						
 						// executes the query
 						$result = @mysqli_query($connection, $query);
