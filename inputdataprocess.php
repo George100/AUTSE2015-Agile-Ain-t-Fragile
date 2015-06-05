@@ -2,8 +2,22 @@
 	<head>
 		<title>Post Status Processed</title>
     </head>
-	
-	<body>
+	<link href="style.css" rel="stylesheet" type="text/css">
+ <div id="menu">
+    <ul id="nav">
+        <li><a href="index.php" >Home</a></li>
+        <li><a href="library.php" >Library</a>
+        <li><a href="bibliographicform.php" >Bibliographic Search</a>
+         <li><a href="methodologyform.php" >Methodology Search</a>
+      <li><a href="inputdataform.php">Submit data!</a>
+   </ul>
+</div>
+<body>
+    <div class="center">
+		<h1>&nbsp;</h1>
+		<h1>&nbsp;</h1>
+		<h1>&nbsp;</h1>
+		<h1>&nbsp;</h1>
 		<h1>Post Status Process</h1>
 		<?php
 			require_once('sqlinfo.inc.php');
@@ -128,9 +142,5 @@
 			}
 			mysqli_close($connection);
 		?>
-		<a href="bibliographicform.php">Bibliographic Search</a><br />
-		<a href="methodologyform.php">Methodology Search</a><br />
-		<a href="inputdataform.php">Submit data!</a><br />
-		<a href="library.php">Library!</a><br />
-		<a href="index.php">Home</a>	</body>
+</div>
 </html>
