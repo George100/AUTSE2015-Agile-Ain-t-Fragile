@@ -20,7 +20,7 @@
 	
 	
 	body {
-		/*background: #00ff00;*/
+		background-image: url("Images/bg2.png");
 	}
 	
 	
@@ -167,7 +167,7 @@
 #nav li li:hover ul {margin-left:200px; margin-top:-35px; display:block;}
 
 #menu {
-    background-image: url("Images/bg2.png");
+    background-color: #FAFAFA;
 }
 
 .center {
