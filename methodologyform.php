@@ -59,7 +59,6 @@
 			<option value="practiceRapidPrototype">Rapid Prototyping</option>
 		</select><p>
 		
-		
 		<b>The Pieces of Evidence</b><br />
 		<i>None of the following below are compulsory</i><p>
 		The benefit or outcome being tested:<br />
@@ -70,13 +69,6 @@
 		<textarea name="taResult" placeholder="50 Character Limit" maxLength="50" cols="55" rows="2"></textarea>
 		<p>The integrity of the implementation of the practice/method:<br />
 		<textarea name="taIntegrity" placeholder="50 Character Limit" maxLength="50" cols="55" rows="2"></textarea>
-		<p><label>Confidence Rating of Evidence:
-		<input type="Radio" name="conOne" value="1">1
-		<input type="Radio" name="conTwo" value="2">2
-		<input type="Radio" name="conThree" value="3">3
-		<input type="Radio" name="conFour" value="4">4
-		<input type="Radio" name="conFive" value="5">5
-		</label><br /><p>
 		
 		<b>Information about the research design</b><br />
 		<i>None of the following below are compulsory</i><p>
