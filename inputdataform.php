@@ -41,6 +41,7 @@
 				<p>
 				Software Development Methodology:
 				<select>
+					<option value="methNull">----------------------------</option>
 					<option value="methSpiral">Spiral</option>
 					<option value="methScrum">Scrum</option>
 					<option value="methWaterfall">Waterfall</option>
@@ -50,6 +51,7 @@
 				</select><p>
 				Practice(s) being investigated: 
 				<br /><select>
+					<option value="practiceNull">----------------------------</option>
 					<option value="practiceTestFirst">Test First Development</option>
 					<option value="practiceAutoRegression">Automated Regression Testing</option>
 					<option value="practiceAutoAcceptance">Automated Acceptance Testing</option>
@@ -60,14 +62,15 @@
 					<option value="practiceRapidPrototype">Rapid Prototyping</option>
 				</select>
 				<select>
-					<option value="practiceTestFirst">Test First Development</option>
-					<option value="practiceAutoRegression">Automated Regression Testing</option>
-					<option value="practiceAutoAcceptance">Automated Acceptance Testing</option>
-					<option value="practiceVersionControl">Version Control</option>
-					<option value="practiceSharedCode">Shared Code</option>
-					<option value="practiceContinuousInt">Continuous Integration</option>
-					<option value="practiceAutomatedBuild">Automated Build</option>
-					<option value="practiceRapidPrototype">Rapid Prototyping</option>
+					<option value="practiceNull">----------------------------</option>
+					<option value="practiceTestFirstTwo">Test First Development</option>
+					<option value="practiceAutoRegressionTwo">Automated Regression Testing</option>
+					<option value="practiceAutoAcceptanceTwo">Automated Acceptance Testing</option>
+					<option value="practiceVersionControlTwo">Version Control</option>
+					<option value="practiceSharedCodeTwo">Shared Code</option>
+					<option value="practiceContinuousIntTwo">Continuous Integration</option>
+					<option value="practiceAutomatedBuildTwo">Automated Build</option>
+					<option value="practiceRapidPrototypeTwo">Rapid Prototyping</option>
 				</select>
 				<p><b>******THE FOLLOWING FIELDS BELOW ARE OPTIONAL******</b><p>
 				<b>The Pieces of Evidence</b><br />
@@ -82,12 +85,14 @@
 				<p><b>Information about the research design</b><br />
 				<p>Nature of the Participants: 
 				<select>
+					<option value="natureNull">----------------------------</option>
 					<option value="natureSmall">Small Group (<15 people)</option>
 					<option value="natureMedium">Medium Group (<50 people)</option>
 					<option value="natureLarge">Large Group (>50 people)</option>
 				</select><br />
 				<p>Research Method:
 				<select>
+					<option value="researchNull">----------------------------</option>
 					<option value="researchQuantity">Quantitatively Driven Approach</option>
 					<option value="researchQuality">Qualitatively Driven Approach</option>
 					<option value="researchMixture">Mixture of Quantitative & Qualitative</option>

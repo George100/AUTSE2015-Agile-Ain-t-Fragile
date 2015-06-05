@@ -29,8 +29,6 @@
 		<p>
 		Date Published: <input type="month" name="searchYear" placeholder="Year Published">
 		<p>
-		Category: <input type="category" name="searchCategory" placeholder="Software Engineering">
-		<p>
 		<input type="submit" value="Search!">
 		<input type="reset" value="Reset">
 	</form>

@@ -86,22 +86,6 @@
 				} else {
 					$authorThreeLname = null;
 				}
-				if (isset ($_POST["afname"][2])) {
-					$authorFourFname = $_POST["afname"][2];
-					if (!preg_match($namePattern, $authorFourFname)) {
-						$authorFourFname = null;
-					}
-				} else {
-					$authorFourFname = null;
-				}
-				if (isset ($_POST["alname"][2])) {
-					$authorFourLname = $_POST["alname"][2];
-					if (!preg_match($namePattern, $authorFourLname)) {
-						$authorFourLname = null;
-					}
-				} else {
-					$authorFourLname = null;
-				}
 				// Current day for the date added.
 				$date = date('d/m/y');
 				
@@ -109,12 +93,10 @@
 				if ($title != null && $datePub != null) {
 					$query = "insert into $sql_tble"
 						."(title, authoronefname, authoronelname, authortwofname, authortwolname, 
-							authorthreefname, authorthreelname, authorfourfname, authorfourlname, 
-								dateadded, datepublish, category)"
+							authorthreefname, authorthreelname, dateadded, datepublish)"
 							. "values"
 								."('$title', '$fname', '$lname', '$authorTwoFname', '$authorTwoLname', 
-									'$authorThreeFname', '$authorThreeLname', '$authorFourFname', '$authorFourLname', 
-										'$date', '$datePub', '$category')";
+									'$authorThreeFname', '$authorThreeLname', '$date', '$datePub')";
 					
 					// executes the query
 					$result = @mysqli_query($connection, $query);
