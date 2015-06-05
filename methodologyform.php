@@ -1,6 +1,22 @@
 <html>
 	<head>
 		<title>SERLER Methodology</title>
+		
+		<script language="javascript">
+				function CountChecks(whichlist, maxchecked, latestcheck) {
+			var listone = new Array("ch1", "ch2", "ch3", "ch4", "ch5", "ch6", "ch7", "ch8");
+			var iterationlist;
+			eval("iterationlist="+whichlist);
+			var count = 0;
+			for( var num=0; num < iterationlist.length; num++) {
+			   if( document.getElementById(iterationlist[num]).checked == true) { count++; }
+			   if( count > maxchecked ) { latestcheck.checked = false; }
+			   }
+			if( count > maxchecked ) {
+			   alert('Sorry, only ' + maxchecked + ' may be checked.');
+			   }
+		}
+		</script>
     </head>
 	<link href="style.css" rel="stylesheet" type="text/css">
 	<div id="menu">
@@ -36,27 +52,25 @@
 				<option value="methoExtremeProg">Extreme Programming</option>
 				<option value="methTestDriven">Test Driven Development</option>
 			</select><p>
-			Practice(s) being investigated: 
-			<select>
-				<option value="practiceTestFirst">Test First Development</option>
-				<option value="practiceAutoRegression">Automated Regression Testing</option>
-				<option value="practiceAutoAcceptance">Automated Acceptance Testing</option>
-				<option value="practiceVersionControl">Version Control</option>
-				<option value="practiceSharedCode">Shared Code</option>
-				<option value="practiceContinuousInt">Continuous Integration</option>
-				<option value="practiceAutomatedBuild">Automated Build</option>
-				<option value="practiceRapidPrototype">Rapid Prototyping</option>
-			</select>
-			<select>
-				<option value="practiceTestFirst">Test First Development</option>
-				<option value="practiceAutoRegression">Automated Regression Testing</option>
-				<option value="practiceAutoAcceptance">Automated Acceptance Testing</option>
-				<option value="practiceVersionControl">Version Control</option>
-				<option value="practiceSharedCode">Shared Code</option>
-				<option value="practiceContinuousInt">Continuous Integration</option>
-				<option value="practiceAutomatedBuild">Automated Build</option>
-				<option value="practiceRapidPrototype">Rapid Prototyping</option>
-			</select>
+			<center><table><tr>
+				Practice(s) being investigated:
+				</tr>
+				<tr>
+				<td><input type="checkbox" id="ch1" name="practice[]" onClick="CountChecks('listone',2,this)" value="Test First Development">Test First Development</td>
+				<td><input type="checkbox" id="ch2" name="practice[]" onClick="CountChecks('listone',2,this)" value="Automated Regression Testing">Automated Regression Testing</td>
+				</tr>
+				<tr>
+				<td><input type="checkbox" id="ch3" name="practice[]" onClick="CountChecks('listone',2,this)" value="Version Control">Version Control</td>
+				<td><input type="checkbox" id="ch4" name="practice[]" onClick="CountChecks('listone',2,this)" value="Automated Acceptance Testing">Automated Acceptance Testing</td>
+				</tr>
+				<tr>
+				<td><input type="checkbox" id="ch5" name="practice[]" onClick="CountChecks('listone',2,this)" value="Shared Code">Shared Code</td>
+				<td><input type="checkbox" id="ch6" name="practice[]" onClick="CountChecks('listone',2,this)" value="Automated Build">Automated Build</td>
+				</tr>
+				<tr>
+				<td><input type="checkbox" id="ch7" name="practice[]" onClick="CountChecks('listone',2,this)" value="Continuous Integration">Continuous Integration</td>
+				<td><input type="checkbox" id="ch8" name="practice[]" onClick="CountChecks('listone',2,this)" value="Rapid Prototyping">Rapid Prototyping</td>
+				</tr></table></center>
 		
 			<p><b>******THE FOLLOWING FIELDS BELOW ARE OPTIONAL******</b><p>
 		

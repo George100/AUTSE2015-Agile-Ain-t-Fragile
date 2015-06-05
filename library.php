@@ -80,6 +80,8 @@
 								echo "<td colspan='2'>", $row["researchquestion"], "</td>";
 								echo "<td>Research Metrics</td>";
 								echo "<td colspan='2'>", $row["researchmetrics"], "</td>";
+								echo "</tr><tr>";
+								echo "<td>Confidence Rating</td>";
 								echo "</table></center>";								
 								echo "<p></p> --- <p></p>";
 								// Limits the max. results to 25
