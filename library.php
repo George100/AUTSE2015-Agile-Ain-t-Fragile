@@ -46,7 +46,6 @@
 								echo "<td><b>Author: </b>", $authorThree, ", <br>", $authorFour, "</td>";
 								echo "<td><b>Date Added: </b>", $row["dateadded"], "</td>";
 								echo "<td><b>Date Published: </b>", $row["datepublish"], "</td>";
-								echo "<td><b>Category: </b>", $row["category"], "</td>";
 								echo "</tr>";
 								// Limits the max. results to 25
 								$maxResults++;
