@@ -2,21 +2,36 @@
 	<head>
 		<title>SERLER Data Entry</title>
 		
-		
-	<script language="javascript">
-	var i = 0;
-	function changeIt() {
-		if (i != 2) {
-			my_div.innerHTML = my_div.innerHTML +
-			"First Name: <input type='text' name='afname[]'> Last Name: <input type='text' name='alname[]'><p>" 
-			i++;
+		<script language="javascript">
+		var i = 0;
+		function changeIt() {
+			if (i != 2) {
+				my_div.innerHTML = my_div.innerHTML +
+				"First Name: <input type='text' name='afname[]'> Last Name: <input type='text' name='alname[]'><p>" 
+				i++;
+			}
 		}
-	}
-	</script>
+		</script>
     </head>
+     <link href="style.css" rel="stylesheet" type="text/css">
+	<div id="menu">
+    <ul id="nav">
+        <li><a href="index.php" >Home</a></li>
+        <li><a href="library.php" >Library</a>
+        <li><a href="bibliographicform.php" >Bibliographic Search</a>
+      <li><a href="methodologyform.php" >Methodology Search</a>
+      <li><a href="inputdataform.php">Submit data!</a>
+   </ul>
+</div>
 	
 	<body>
+    <div class="center">
+		<h1>&nbsp;</h1>
+		<h1>&nbsp;</h1>
+		<h1>&nbsp;</h1>
 		<h1>Data Entry Form</h1>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
 		<form action="inputdataprocess.php" method="post">
 			Title: <input type="text" name="title" placeholder="Mary had a little lamb"></label>
 			<p>
@@ -34,10 +49,7 @@
 			<input type="submit" value="Post">
 			<input type="reset" value="Reset">
 		</form>
-		<a href="bibliographicform.php">Bibliographic Search</a><br />
-		<a href="methodologyform.php">Methodology Search</a><br />
-		<a href="inputdataform.php">Submit data!</a><br />
-		<a href="library.php">Library!</a><br />
-		<a href="index.php">Home</a>
-	</body>
+    </div>
+		
+</body>
 </html>
