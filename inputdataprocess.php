@@ -111,20 +111,91 @@
 							$practices .= $practicesInvestigated[$i];
 							$practices .= ", ";
 						}
+						if ($practices == null) {
+							$practices = null;
+						}
+					}
+					// The Pieces of Evidence
+					if (isset ($_POST["taContext"])) {
+						$taContext = $_POST["taContext"];
+						if (empty ($taContext)) {
+							$taContext = null;
+						}
+					}
+					if (isset ($_POST["taTested"])) {
+						$taTested = $_POST["taTested"];
+						if (empty ($taTested)) {
+							$taTested = null;
+						}
+					}
+					if (isset ($_POST["taResult"])) {
+						$taResult = $_POST["taResult"];
+						if (empty ($taResult)) {
+							$taResult = null;
+						}
+					}
+					if (isset ($_POST["taIntegrity"])) {
+						$taIntegrity = $_POST["taIntegrity"];
+						if (empty ($taIntegrity)) {
+							$taIntegrity = null;
+						}
+					}
+					// Information about the research design
+					if (isset ($_POST["natureParticipants"])) {
+						$natureParticipants = $_POST["natureParticipants"];
+						if ($natureParticipants == 0) {
+							$natureParticipants = null;
+						} elseif ($natureParticipants == 1) {
+							$natureParticipants = "Small Group (<15 people)";
+						} elseif ($natureParticipants == 2) {
+							$natureParticipants = "Medium Group (<50 people)";
+						} elseif ($natureParticipants == 3) {
+							$natureParticipants = "Large Group (>50 people)";
+						}
+					}
+					if (isset ($_POST["researchMethod"])) {
+						$researchMethod = $_POST["researchMethod"];
+						if ($researchMethod == 0) {
+							$researchMethod = null;
+						} elseif ($researchMethod == 1) {
+							$researchMethod = "Quantitatively Driven Approach";
+						} elseif ($researchMethod == 2) {
+							$researchMethod = "Qualitatively Driven Approach";
+						} elseif ($researchMethod == 3) {
+							$researchMethod = "Mixture of Quantitative & Qualitative";
+						}
+					}
+					if (isset ($_POST["taResearchQuestion"])) {
+						$taResearchQuestion = $_POST["taResearchQuestion"];
+						if (empty ($taResearchQuestion)) {
+							$taResearchQuestion = null;
+						}
+					}
+					if (isset ($_POST["taResearchMetrics"])) {
+						$taResearchMetrics = $_POST["taResearchMetrics"];
+						if (empty ($taResearchMetrics)) {
+							$taResearchMetrics = null;
+						}
 					}
 					// Current day for the date added.
 					$date = date('d/m/y');
 					
 					// checks if the necessary fields are complete, otherwise inform user to fill them in.
-					if ($title != null && $datePub != null && $methodology != null) {
+					if ($title != null && $datePub != null && $methodology != null && $practices != null) {
 						$query = "insert into $sql_tble"
 							."(title, authoronefname, authoronelname, authortwofname, authortwolname, 
 								authorthreefname, authorthreelname, dateadded, datepublish, 
-									sdmethodology, practicesinvestigated)"
+									sdmethodology, practicesinvestigated, benefitoutcometested,
+									contextstudy, studyresult, implementationintegrity, 
+									numberofparticipants, researchmethod, 
+									researchquestion, researchmetrics)"
 								. "values"
 									."('$title', '$fname', '$lname', '$authorTwoFname', '$authorTwoLname', 
 										'$authorThreeFname', '$authorThreeLname', '$date', '$datePub', 
-											'$methodology', '$practices')";
+											'$methodology', '$practices', '$taTested',  
+											'$taContext', '$taResult', '$taIntegrity', 
+											'$natureParticipants', '$researchMethod',
+											'$taResearchQuestion', '$taResearchMetrics')";
 						
 						// executes the query
 						$result = @mysqli_query($connection, $query);
@@ -149,7 +220,10 @@
 							echo "<p>Please enter a date!<p>";
 						}
 						if ($methodology == null) {
-							echo "<p>Please enter a methodology<p>";
+							echo "<p>Please select a methodology<p>";
+						}
+						if ($practices == null) {
+							echo "<p>Please select some practice(s)";
 						}
 					}
 				}

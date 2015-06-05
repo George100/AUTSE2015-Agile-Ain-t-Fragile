@@ -86,7 +86,7 @@
 				<p><b>******THE FOLLOWING FIELDS BELOW ARE OPTIONAL******</b><p>
 				<b>The Pieces of Evidence</b><br />
 				The benefit or outcome being tested:<br />
-				<textarea name="taTested" placeholder="50 Character Limit" maxLength="50" cols="55" rows="2textarea>
+				<textarea name="taTested" placeholder="50 Character Limit" maxLength="50" cols="55" rows="2"></textarea>
 				<p>The context of the study:<br />
 				<textarea name="taContext" placeholder="50 Character Limit" maxLength="50" cols="55" rows="2"></textarea>
 				<p>The result of the study:<br />
@@ -95,18 +95,18 @@
 				<textarea name="taIntegrity" placeholder="50 Character Limit" maxLength="50" cols="55" rows="2"></textarea>
 				<p><b>Information about the research design</b><br />
 				<p>Nature of the Participants: 
-				<select>
-					<option value="natureNull">----------------------------</option>
-					<option value="natureSmall">Small Group (<15 people)</option>
-					<option value="natureMedium">Medium Group (<50 people)</option>
-					<option value="natureLarge">Large Group (>50 people)</option>
+				<select id="natureParticipants" name="natureParticipants">
+					<option value="0">----------------------------</option>
+					<option value="1">Small Group (<15 people)</option>
+					<option value="2">Medium Group (<50 people)</option>
+					<option value="3">Large Group (>50 people)</option>
 				</select><br />
 				<p>Research Method:
-				<select>
-					<option value="researchNull">----------------------------</option>
-					<option value="researchQuantity">Quantitatively Driven Approach</option>
-					<option value="researchQuality">Qualitatively Driven Approach</option>
-					<option value="researchMixture">Mixture of Quantitative & Qualitative</option>
+				<select id="researchMethod" name="researchMethod">
+					<option value="0">----------------------------</option>
+					<option value="1">Quantitatively Driven Approach</option>
+					<option value="2">Qualitatively Driven Approach</option>
+					<option value="3">Mixture of Quantitative & Qualitative</option>
 				</select><br /><p>
 				Research Question:<br />
 				<textarea name="taResearchQuestion" placeholder="50 Character Limit" maxLength="50" cols="55" rows="2"></textarea>
