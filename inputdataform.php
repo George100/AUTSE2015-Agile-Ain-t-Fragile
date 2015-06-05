@@ -1,6 +1,18 @@
 <html>
 	<head>
 		<title>SERLER Data Entry</title>
+		
+		
+	<script language="javascript">
+	var i = 0;
+	function changeIt() {
+		if (i != 2) {
+			my_div.innerHTML = my_div.innerHTML +
+			"First Name: <input type='text' name='afname[]'> Last Name: <input type='text' name='alname[]'><p>" 
+			i++;
+		}
+	}
+	</script>
     </head>
 	
 	<body>
