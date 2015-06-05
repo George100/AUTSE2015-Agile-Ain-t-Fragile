@@ -1,10 +1,10 @@
 <html>
 	<head>
-		<title>SERLER</title>
+		<title>SERLER Library</title>
     </head>
 	
 	<body>
-		<h1>Welcome to SERLER</h1>
+		<h1>SERLER Library</h1>
 		<h4>These are all the current data in the repository.</h4>
 		<?php
 			require_once('sqlinfo.inc.php');
@@ -48,8 +48,9 @@
 				echo "</table>";
 			}			
 		?>
-		<a href="index.php" class="btn">Basic Search</a>
-		<a href="searchdataformadv.php" class="btn">Advanced Search</a>
-		<a href="index.php" class="btn">Click here to return to Home Page</a>
-	</body>
+		<a href="bibliographicform.php">Bibliographic Search</a><br />
+		<a href="methodologyform.php">Methodology Search</a><br />
+		<a href="inputdataform.php">Submit data!</a><br />
+		<a href="library.php">Library!</a><br />
+		<a href="index.php">Home</a>	</body>
 </html>
