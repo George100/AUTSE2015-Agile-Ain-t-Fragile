@@ -168,10 +168,14 @@
 
 #menu
 {
-    background-color: #FAFAFA;	
+    background-image: url("Images/bg2.png");
 }
 
 .center
 {
 	text-align: center;
+}
+
+textarea {
+	resize: none;
 }
