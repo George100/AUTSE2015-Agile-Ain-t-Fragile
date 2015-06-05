@@ -40,14 +40,14 @@
 				<input type="month" name="datePub">
 				<p>
 				Software Development Methodology:
-				<select>
-					<option value="methNull">----------------------------</option>
-					<option value="methSpiral">Spiral</option>
-					<option value="methScrum">Scrum</option>
-					<option value="methWaterfall">Waterfall</option>
-					<option value="methKanban">Kanban</option>
-					<option value="methoExtremeProg">Extreme Programming</option>
-					<option value="methTestDriven">Test Driven Development</option>
+				<select id="methodology" name="methodology">
+					<option value="0">Select Methodology</option>
+					<option value="1">Spiral</option>
+					<option value="2">Scrum</option>
+					<option value="3">Waterfall</option>
+					<option value="4">Kanban</option>
+					<option value="5">Extreme Programming</option>
+					<option value="6">Test Driven Development</option>
 				</select><p>
 				Practice(s) being investigated: 
 				<br /><select>
