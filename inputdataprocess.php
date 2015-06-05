@@ -104,6 +104,10 @@
 							$methodology = "Test Driven Development";
 						}
 					}
+					if (isset ($_POST["practice"])) {
+						$practicesInvestigated = $_POST["practice"];
+						
+					}
 					
 
 					// Current day for the date added.

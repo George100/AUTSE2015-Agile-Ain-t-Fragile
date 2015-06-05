@@ -4,11 +4,26 @@
 		<script language="javascript">
 		var i = 0;
 		function changeIt() {
+
 			if (i != 2) {
 				my_div.innerHTML = my_div.innerHTML +
 				"First Name: <input type='text' name='afname[]'> Last Name: <input type='text' name='alname[]'><p>" 
 				i++;
 			}
+		}
+		
+		function CountChecks(whichlist, maxchecked, latestcheck) {
+			var listone = new Array("ch1", "ch2", "ch3", "ch4", "ch5", "ch6", "ch7", "ch8");
+			var iterationlist;
+			eval("iterationlist="+whichlist);
+			var count = 0;
+			for( var num=0; num < iterationlist.length; num++) {
+			   if( document.getElementById(iterationlist[num]).checked == true) { count++; }
+			   if( count > maxchecked ) { latestcheck.checked = false; }
+			   }
+			if( count > maxchecked ) {
+			   alert('Sorry, only ' + maxchecked + ' may be checked.');
+			   }
 		}
 		</script>
     </head>
@@ -28,7 +43,7 @@
 			<h1>&nbsp;</h1>
 			<h1>&nbsp;</h1>
 			<h1>Data Entry Form</h1>
-			<form action="inputdataprocess.php" method="post">
+			<form action="inputdataprocess.php" method="post" name="submitdata">
 				Title: <input type="text" name="title" placeholder="Mary had a little lamb"></label>
 				<p>
 				Author(s): <input type="button" value="Add Author" onClick="changeIt()">
@@ -49,29 +64,25 @@
 					<option value="5">Extreme Programming</option>
 					<option value="6">Test Driven Development</option>
 				</select><p>
-				Practice(s) being investigated: 
-				<br /><select>
-					<option value="practiceNull">----------------------------</option>
-					<option value="practiceTestFirst">Test First Development</option>
-					<option value="practiceAutoRegression">Automated Regression Testing</option>
-					<option value="practiceAutoAcceptance">Automated Acceptance Testing</option>
-					<option value="practiceVersionControl">Version Control</option>
-					<option value="practiceSharedCode">Shared Code</option>
-					<option value="practiceContinuousInt">Continuous Integration</option>
-					<option value="practiceAutomatedBuild">Automated Build</option>
-					<option value="practiceRapidPrototype">Rapid Prototyping</option>
-				</select>
-				<select>
-					<option value="practiceNull">----------------------------</option>
-					<option value="practiceTestFirstTwo">Test First Development</option>
-					<option value="practiceAutoRegressionTwo">Automated Regression Testing</option>
-					<option value="practiceAutoAcceptanceTwo">Automated Acceptance Testing</option>
-					<option value="practiceVersionControlTwo">Version Control</option>
-					<option value="practiceSharedCodeTwo">Shared Code</option>
-					<option value="practiceContinuousIntTwo">Continuous Integration</option>
-					<option value="practiceAutomatedBuildTwo">Automated Build</option>
-					<option value="practiceRapidPrototypeTwo">Rapid Prototyping</option>
-				</select>
+				<center><table><tr>
+				Practice(s) being investigated:
+				</tr>
+				<tr>
+				<td><input type="checkbox" id="ch1" name="practice[]" onClick="CountChecks('listone',2,this)" value="0">Test First Development</td>
+				<td><input type="checkbox" id="ch2" name="practice[]" onClick="CountChecks('listone',2,this)" value="1">Automated Regression Testing</td>
+				</tr>
+				<tr>
+				<td><input type="checkbox" id="ch3" name="practice[]" onClick="CountChecks('listone',2,this)" value="2">Version Control</td>
+				<td><input type="checkbox" id="ch4" name="practice[]" onClick="CountChecks('listone',2,this)" value="3">Automated Acceptance Testing</td>
+				</tr>
+				<tr>
+				<td><input type="checkbox" id="ch5" name="practice[]" onClick="CountChecks('listone',2,this)" value="4">Shared Code</td>
+				<td><input type="checkbox" id="ch6" name="practice[]" onClick="CountChecks('listone',2,this)" value="5">Automated Build</td>
+				</tr>
+				<tr>
+				<td><input type="checkbox" id="ch7" name="practice[]" onClick="CountChecks('listone',2,this)" value="6">Continuous Integration</td>
+				<td><input type="checkbox" id="ch8" name="practice[]" onClick="CountChecks('listone',2,this)" value="7">Rapid Prototyping</td>
+				</tr></table></center>
 				<p><b>******THE FOLLOWING FIELDS BELOW ARE OPTIONAL******</b><p>
 				<b>The Pieces of Evidence</b><br />
 				The benefit or outcome being tested:<br />
