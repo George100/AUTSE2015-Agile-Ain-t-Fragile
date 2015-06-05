@@ -1,7 +1,6 @@
 <html>
 	<head>
-		<title>SERLER Methodology</title>
-		
+		<title>SERLER Methodology Search</title>
 		<script language="javascript">
 				function CountChecks(whichlist, maxchecked, latestcheck) {
 			var listone = new Array("ch1", "ch2", "ch3", "ch4", "ch5", "ch6", "ch7", "ch8");

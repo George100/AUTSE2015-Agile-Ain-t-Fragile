@@ -40,7 +40,7 @@
 								$authorOne = $row["authoronefname"] . " " . $row["authoronelname"];
 								$authorTwo = $row["authortwofname"] . " " . $row["authortwolname"];
 								$authorThree = $row["authorthreefname"] . " " . $row["authorthreelname"];
-								echo "<center><table border='1' width='900'>";
+								echo "<center><table border='2' width='900'>";
 								echo "<td colspan='6'><center><b>Information about the article: ", $resultNum, "</b></center>";
 								echo "<tr>";
 								echo "<td width='150'><b>Title: </b>", "</td>";
@@ -80,8 +80,7 @@
 								echo "<td colspan='2'>", $row["researchquestion"], "</td>";
 								echo "<td>Research Metrics</td>";
 								echo "<td colspan='2'>", $row["researchmetrics"], "</td>";
-								echo "</tr><tr>";
-								echo "<td>Confidence Rating</td>";
+								echo "</tr>";
 								echo "</table></center>";								
 								echo "<p></p> --- <p></p>";
 								// Limits the max. results to 25
