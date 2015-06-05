@@ -3,7 +3,7 @@
 		<title>SERLER Methodology</title>
     </head>
 	<link href="style.css" rel="stylesheet" type="text/css">
-	 <div id="menu">
+	<div id="menu">
     <ul id="nav">
         <li><a href="index.php" >Home</a></li>
         <li><a href="library.php" >Library</a>
