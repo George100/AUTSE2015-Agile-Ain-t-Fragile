@@ -29,5 +29,6 @@
 		  <li><b>Submit Data:</b> Submits a research paper authored by you or your group. <i>Require login!</i></li>
 		</ul>
 		</p>
+		<img src="Images/transparent logo.png" alt="transparent logo">
 </html>
 

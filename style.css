@@ -166,14 +166,15 @@
 #nav li:hover ul {display:block;} 
 #nav li li:hover ul {margin-left:200px; margin-top:-35px; display:block;}
 
-#menu {
-    background-color: #FAFAFA;
+#menu
+{
+    background-color: #FAFAFA;	
 }
 
-.center {
+.center
+{
 	text-align: center;
 }
-
 textarea {
 	resize: none;
 }
