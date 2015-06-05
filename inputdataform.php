@@ -68,20 +68,20 @@
 				Practice(s) being investigated:
 				</tr>
 				<tr>
-				<td><input type="checkbox" id="ch1" name="practice[]" onClick="CountChecks('listone',2,this)" value="0">Test First Development</td>
-				<td><input type="checkbox" id="ch2" name="practice[]" onClick="CountChecks('listone',2,this)" value="1">Automated Regression Testing</td>
+				<td><input type="checkbox" id="ch1" name="practice[]" onClick="CountChecks('listone',2,this)" value="Test First Development">Test First Development</td>
+				<td><input type="checkbox" id="ch2" name="practice[]" onClick="CountChecks('listone',2,this)" value="Automated Regression Testing">Automated Regression Testing</td>
 				</tr>
 				<tr>
-				<td><input type="checkbox" id="ch3" name="practice[]" onClick="CountChecks('listone',2,this)" value="2">Version Control</td>
-				<td><input type="checkbox" id="ch4" name="practice[]" onClick="CountChecks('listone',2,this)" value="3">Automated Acceptance Testing</td>
+				<td><input type="checkbox" id="ch3" name="practice[]" onClick="CountChecks('listone',2,this)" value="Version Control">Version Control</td>
+				<td><input type="checkbox" id="ch4" name="practice[]" onClick="CountChecks('listone',2,this)" value="Automated Acceptance Testing">Automated Acceptance Testing</td>
 				</tr>
 				<tr>
-				<td><input type="checkbox" id="ch5" name="practice[]" onClick="CountChecks('listone',2,this)" value="4">Shared Code</td>
-				<td><input type="checkbox" id="ch6" name="practice[]" onClick="CountChecks('listone',2,this)" value="5">Automated Build</td>
+				<td><input type="checkbox" id="ch5" name="practice[]" onClick="CountChecks('listone',2,this)" value="Shared Code">Shared Code</td>
+				<td><input type="checkbox" id="ch6" name="practice[]" onClick="CountChecks('listone',2,this)" value="Automated Build">Automated Build</td>
 				</tr>
 				<tr>
-				<td><input type="checkbox" id="ch7" name="practice[]" onClick="CountChecks('listone',2,this)" value="6">Continuous Integration</td>
-				<td><input type="checkbox" id="ch8" name="practice[]" onClick="CountChecks('listone',2,this)" value="7">Rapid Prototyping</td>
+				<td><input type="checkbox" id="ch7" name="practice[]" onClick="CountChecks('listone',2,this)" value="Continuous Integration">Continuous Integration</td>
+				<td><input type="checkbox" id="ch8" name="practice[]" onClick="CountChecks('listone',2,this)" value="Rapid Prototyping">Rapid Prototyping</td>
 				</tr></table></center>
 				<p><b>******THE FOLLOWING FIELDS BELOW ARE OPTIONAL******</b><p>
 				<b>The Pieces of Evidence</b><br />
