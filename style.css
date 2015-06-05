@@ -20,7 +20,7 @@
 	
 	
 	body {
-		background-image: url("Images/bg2.png");
+		background: #00ff00;
 	}
 	
 	
@@ -174,8 +174,4 @@
 .center
 {
 	text-align: center;
-}
-
-textarea {
-	resize: none;
 }
