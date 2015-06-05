@@ -21,6 +21,7 @@
 		Category: <input type="category" name="searchCategory" placeholder="Software Engineering">
 		<p>
 		<input type="submit" value="Search!">
+		<input type="reset" value="Reset">
 	</form>
 	<a href="bibliographicform.php">Bibliographic Search</a><br />
 	<a href="methodologyform.php">Methodology Search</a><br />
