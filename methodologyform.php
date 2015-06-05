@@ -15,7 +15,6 @@
 		<input type="Radio" name="credFour" value="4">4
 		<input type="Radio" name="credFive" value="5">5
 		</label><br />
-
 		Software Development Methodology:
 		<select>
 			<option value="methNone">Choose One</option>
@@ -25,12 +24,6 @@
 			<option value="methKanban">Kanban</option>
 			<option value="methoExtremeProg">Extreme Programming</option>
 			<option value="methTestDriven">Test Driven Development</option>
-		</select><br />
-		Nature of the Participants: 
-		<select>
-			<option value="natureSmall">Small Group (<15 people)</option>
-			<option value="natureMedium">Medium Group (<50 people)</option>
-			<option value="natureLarge">Large Group (>50 people)</option>
 		</select><br />
 		Practice(s) being investigated: 
 		<select>
@@ -60,7 +53,26 @@
 		<input type="Radio" name="conThree" value="3">3
 		<input type="Radio" name="conFour" value="4">4
 		<input type="Radio" name="conFive" value="5">5
-		</label><br />
+		</label><br /><p>
+		
+		<b>Information about the research design</b><br />
+		<i>None of the following below are compulsory</i><p>
+		Research Question:<br />
+		<textarea name="taResearchQuestion" placeholder="50 Character Limit" maxLength="50" cols="55" rows="2"></textarea>
+		<br />Research Method:
+		<select>
+			<option value="researchQuantity">Quantitatively Driven Approach</option>
+			<option value="researchQuality">Qualitatively Driven Approach</option>
+			<option value="researchMixture">Mixture of Quantitative & Qualitative</option>
+		</select><br /><p>
+		Research Metrics:<br />
+		<textarea name="taResearchMetrics" placeholder="50 Character Limit" maxLength="50" cols="55" rows="2"></textarea>
+		<br />Nature of the Participants: 
+		<select>
+			<option value="natureSmall">Small Group (<15 people)</option>
+			<option value="natureMedium">Medium Group (<50 people)</option>
+			<option value="natureLarge">Large Group (>50 people)</option>
+		</select><br />
 	</form>
 	<p>
 	<a href="bibliographicform.php">Bibliographic Search</a><br />
