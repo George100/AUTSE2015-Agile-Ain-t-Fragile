@@ -26,7 +26,7 @@
 			<input type="Radio" name="credibility" value="3">3
 			<input type="Radio" name="credibility" value="4">4
 			<input type="Radio" name="credibility" value="5">5
-			<br />
+			<p>
 			Software Development Methodology:
 			<select>
 				<option value="methSpiral">Spiral</option>
@@ -35,7 +35,7 @@
 				<option value="methKanban">Kanban</option>
 				<option value="methoExtremeProg">Extreme Programming</option>
 				<option value="methTestDriven">Test Driven Development</option>
-			</select><br />
+			</select><p>
 			Practice(s) being investigated: 
 			<select>
 				<option value="practiceTestFirst">Test First Development</option>
