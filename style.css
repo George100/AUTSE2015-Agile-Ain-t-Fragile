@@ -83,7 +83,7 @@
 	#header{
 	left: 50%;
 	margin-left: -500px;
-	background:url(Images/logo.png) no-repeat;
+	background:url(Images/transparent logo.png) no-repeat;
 	width:200px;
 	height:200px;
 	}
@@ -91,7 +91,7 @@
 	div#wrapperHeader {
 	 width:100%;
 	 height:200px; 
-	 background:url(images/logo.png);
+	 background:url(Images/transparent logo.png);
 	 text-align:center;
 	}
 	
