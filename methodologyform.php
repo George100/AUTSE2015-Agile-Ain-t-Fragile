@@ -2,7 +2,20 @@
 	<head>
 		<title>SERLER Methodology</title>
     </head>
-	
+	<link href="style.css" rel="stylesheet" type="text/css">
+	 <div id="menu">
+    <ul id="nav">
+        <li><a href="index.php" >Home</a></li>
+        <li><a href="library.php" >Library</a>
+        <li><a href="bibliographicform.php" >Bibliographic Search</a>
+         <li><a href="methodologyform.php" >Methodology Search</a>
+      <li><a href="inputdataform.php">Submit data!</a>
+   </ul>
+</div>
+<h1>&nbsp;</h1>
+		<h1>&nbsp;</h1>
+		<h1>&nbsp;</h1>
+        <div class="center">
 	<h1>Methodology Search</h1>
 	<h4>Feel free to view data in the repository.</h4>
 	<form action="methodologyprocess.php" method="get">
@@ -17,7 +30,6 @@
 		</label><br />
 		Software Development Methodology:
 		<select>
-			<option value="methNone">Choose One</option>
 			<option value="methSpiral">Spiral</option>
 			<option value="methScrum">Scrum</option>
 			<option value="methWaterfall">Waterfall</option>
@@ -73,12 +85,11 @@
 			<option value="natureMedium">Medium Group (<50 people)</option>
 			<option value="natureLarge">Large Group (>50 people)</option>
 		</select><br />
+		<p>
+		<input type="submit" value="Post">
+		<input type="reset" value="Reset">
 	</form>
+    </div>
 	<p>
-	<a href="bibliographicform.php">Bibliographic Search</a><br />
-	<a href="methodologyform.php">Methodology Search</a><br />
-	<a href="inputdataform.php">Submit data!</a><br />
-	<a href="library.php">Library!</a><br />
-	<a href="index.php">Home</a>
 	</body>
 </html>
