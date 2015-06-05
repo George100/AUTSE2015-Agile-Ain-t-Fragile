@@ -119,32 +119,32 @@
 					if (isset ($_POST["taContext"])) {
 						$taContext = $_POST["taContext"];
 						if (empty ($taContext)) {
-							$taContext = null;
+							$taContext = "N/A";
 						}
 					}
 					if (isset ($_POST["taTested"])) {
 						$taTested = $_POST["taTested"];
 						if (empty ($taTested)) {
-							$taTested = null;
+							$taTested = "N/A";
 						}
 					}
 					if (isset ($_POST["taResult"])) {
 						$taResult = $_POST["taResult"];
 						if (empty ($taResult)) {
-							$taResult = null;
+							$taResult = "N/A";
 						}
 					}
 					if (isset ($_POST["taIntegrity"])) {
 						$taIntegrity = $_POST["taIntegrity"];
 						if (empty ($taIntegrity)) {
-							$taIntegrity = null;
+							$taIntegrity = "N/A";
 						}
 					}
 					// Information about the research design
 					if (isset ($_POST["natureParticipants"])) {
 						$natureParticipants = $_POST["natureParticipants"];
 						if ($natureParticipants == 0) {
-							$natureParticipants = null;
+							$natureParticipants = "N/A";
 						} elseif ($natureParticipants == 1) {
 							$natureParticipants = "Small Group (<15 people)";
 						} elseif ($natureParticipants == 2) {
@@ -156,7 +156,7 @@
 					if (isset ($_POST["researchMethod"])) {
 						$researchMethod = $_POST["researchMethod"];
 						if ($researchMethod == 0) {
-							$researchMethod = null;
+							$researchMethod = "N/A";
 						} elseif ($researchMethod == 1) {
 							$researchMethod = "Quantitatively Driven Approach";
 						} elseif ($researchMethod == 2) {
@@ -168,13 +168,13 @@
 					if (isset ($_POST["taResearchQuestion"])) {
 						$taResearchQuestion = $_POST["taResearchQuestion"];
 						if (empty ($taResearchQuestion)) {
-							$taResearchQuestion = null;
+							$taResearchQuestion = "N/A";
 						}
 					}
 					if (isset ($_POST["taResearchMetrics"])) {
 						$taResearchMetrics = $_POST["taResearchMetrics"];
 						if (empty ($taResearchMetrics)) {
-							$taResearchMetrics = null;
+							$taResearchMetrics = "N/A";
 						}
 					}
 					// Current day for the date added.
