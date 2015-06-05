@@ -40,7 +40,6 @@
 								$authorOne = $row["authoronefname"] . " " . $row["authoronelname"];
 								$authorTwo = $row["authortwofname"] . " " . $row["authortwolname"];
 								$authorThree = $row["authorthreefname"] . " " . $row["authorthreelname"];
-								$authorFour = $row["authorfourfname"] . " " .  $row["authorfourlname"];
 								echo "<tr>";
 								echo "<td><b>Title: </b>", $row["title"], "</td>";
 								echo "<td><b>Author: </b>", $authorOne, ", <br>", $authorTwo, "</td>";
