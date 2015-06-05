@@ -2,7 +2,16 @@
 	<head>
 		<title>Bibliographic Status Processed</title>
     </head>
-
+ <link href="style.css" rel="stylesheet" type="text/css">
+ <div id="menu">
+    <ul id="nav">
+        <li><a href="index.php" >Home</a></li>
+        <li><a href="library.php" >Library</a>
+        <li><a href="bibliographicform.php" >Bibliographic Search</a>
+         <li><a href="methodologyform.php" >Methodology Search</a>
+      <li><a href="inputdataform.php">Submit data!</a>
+   </ul>
+</div>
 	<body>
 		<h1>Search Results</h1>
 		<?php
@@ -77,10 +86,5 @@
 			}	
 			mysqli_close($connection);
 		?>	
-		<a href="bibliographicform.php">Bibliographic Search</a><br />
-		<a href="methodologyform.php">Methodology Search</a><br />
-		<a href="inputdataform.php">Submit data!</a><br />
-		<a href="library.php">Library!</a><br />
-		<a href="index.php">Home</a>
 	</body>
 </html>
