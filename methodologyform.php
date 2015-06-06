@@ -22,8 +22,8 @@
 		<ul id="nav">
 			<li><a href="index.php" >Home</a></li>
 			<li><a href="library.php" >Library</a>
-			<li><a href="bibliographicform.php" >Bibliographic Search</a>
-			 <li><a href="methodologyform.php" >Methodology Search</a>
+			<li><a href="bibliographicform.php">Bibliographic Search</a>
+			 <li><a href="methodologyform.php">Methodology Search</a>
 		  <li><a href="inputdataform.php">Submit data!</a>
 	   </ul>
 	</div>
@@ -32,7 +32,7 @@
 		<h1>&nbsp;</h1>
 		<h1 class="center">Methodology Search</h1>
 	</p>
-		<form action="methodologyprocess.php" method="get" class="center">
+		<form action="methodologyprocess.php" method="POST" class="center">
 			<b>Information about the article</b>
 			<p>
 			Credibility Rating of Article:
@@ -43,14 +43,15 @@
 			<input type="Radio" name="credibility" value="5">5
 			<p>
 			Software Development Methodology:
-			<select>
-				<option value="methSpiral">Spiral</option>
-				<option value="methScrum">Scrum</option>
-				<option value="methWaterfall">Waterfall</option>
-				<option value="methKanban">Kanban</option>
-				<option value="methoExtremeProg">Extreme Programming</option>
-				<option value="methTestDriven">Test Driven Development</option>
-			</select><p>
+				<select id="methodology" name="methodology">
+					<option value="0">Select Methodology</option>
+					<option value="1">Spiral</option>
+					<option value="2">Scrum</option>
+					<option value="3">Waterfall</option>
+					<option value="4">Kanban</option>
+					<option value="5">Extreme Programming</option>
+					<option value="6">Test Driven Development</option>
+				</select><p>
 			<center><table><tr>
 				Practice(s) being investigated:
 				</tr>
@@ -85,20 +86,20 @@
 			<textarea name="taIntegrity" placeholder="50 Character Limit" maxLength="50" cols="55" rows="2"></textarea>
 			<p>
 
-			<b>Information about the research design</b>
-			<br />	
-			Nature of the Participants: 
-			<select>
-				<option value="natureSmall">Small Group (<15 people)</option>
-				<option value="natureMedium">Medium Group (<50 people)</option>
-				<option value="natureLarge">Large Group (>50 people)</option>
+			<b>Information about the research design</b><br />	
+			<p>Nature of the Participants: 
+			<select id="natureParticipants" name="natureParticipants">
+				<option value="0">----------------------------</option>
+				<option value="1">Small Group (<15 people)</option>
+				<option value="2">Medium Group (<50 people)</option>
+				<option value="3">Large Group (>50 people)</option>
 			</select><br />
-			<p>
-			Research Method:
-			<select>
-				<option value="researchQuantity">Quantitatively Driven Approach</option>
-				<option value="researchQuality">Qualitatively Driven Approach</option>
-				<option value="researchMixture">Mixture of Quantitative & Qualitative</option>
+			<p>Research Method:
+			<select id="researchMethod" name="researchMethod">
+				<option value="0">----------------------------</option>
+				<option value="1">Quantitatively Driven Approach</option>
+				<option value="2">Qualitatively Driven Approach</option>
+				<option value="3">Mixture of Quantitative & Qualitative</option>
 			</select><br /><p>
 			Research Question:<br />
 			<textarea name="taResearchQuestion" placeholder="50 Character Limit" maxLength="50" cols="55" rows="2"></textarea>

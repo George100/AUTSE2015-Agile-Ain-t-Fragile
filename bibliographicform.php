@@ -19,7 +19,7 @@
 	<h1 class="center">Bibliographic Search</h1>
 	</p>
 	<h4 >&nbsp;</h4>
-	<form action="searchdataprocessadv.php" method="get" class="center">
+	<form action="bibliographicprocess.php" method="get" class="center">
 	<p style="font-size: 18px">Fill in the fields to search:	  </p>
 	<p>
 	  Title: <input type="text" name="searchTitle" placeholder="Title name" size="30">

@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>Post Status Processed</title>
+		<title>SERLER Submission Processed</title>
     </head>
 	<link href="style.css" rel="stylesheet" type="text/css">
 	<div id="menu">

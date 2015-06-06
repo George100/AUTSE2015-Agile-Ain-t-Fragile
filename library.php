@@ -59,7 +59,7 @@
 								echo "</tr><tr>";
 								echo "<td colspan='6'><center><b>The Pieces of Evidence<b></center></td>";
 								echo "</tr><tr>";								
-								echo "<td width='150'>The result of the study</td>";
+								echo "<td width='150'>The context of the study</td>";
 								echo "<td colspan='2'>", $row["contextstudy"], "</td>";
 								echo "<td width='150'>The benefit or outcome being test</td>";
 								echo "<td colspan='2'>", $row["benefitoutcometested"], "</td>";
