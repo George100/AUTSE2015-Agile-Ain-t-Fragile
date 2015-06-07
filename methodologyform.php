@@ -35,13 +35,6 @@
 		<form action="methodologyprocess.php" method="POST" class="center">
 			<b>Information about the article</b>
 			<p>
-			Credibility Rating of Article:
-			<input type="Radio" name="credibility" value="1">1
-			<input type="Radio" name="credibility" value="2">2
-			<input type="Radio" name="credibility" value="3">3
-			<input type="Radio" name="credibility" value="4">4
-			<input type="Radio" name="credibility" value="5">5
-			<p>
 			Software Development Methodology:
 				<select id="methodology" name="methodology">
 					<option value="0">Select Methodology</option>
